@@ -5,13 +5,9 @@ services:
     image: ansible-base
     container_name: ansible
     
-  postgres:
+  postgres-db:
     image: ansible-base
-    container_name: postgres
-
-  postgres:
-    image: ansible-base
-    container_name: postgres
+    container_name: postgres-db
 
   spark1:
     image: ansible-base

@@ -5,6 +5,7 @@ ADD . /home/
 COPY env/id_rsa /root/.ssh/
 COPY env/id_rsa.pub /root/.ssh/authorized_keys
 RUN chown root:root /root/.ssh/authorized_keys
+RUN chmod 600 /root/.ssh/id_rsa
 
 RUN echo "===> Adding Ansible's PPA..."  && \
     apt-get update  &&  apt-get install -y gnupg2 vim iputils-ping telnet && \

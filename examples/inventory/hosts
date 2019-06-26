@@ -1,5 +1,5 @@
 [database]
-postgres
+postgres-db
 
 [batch]
 spark1

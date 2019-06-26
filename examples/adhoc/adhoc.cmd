@@ -7,5 +7,5 @@ echo "spark1" >> hosts
 # should respond all servers
 ansible all -m shell -a 'echo "Hello World!"'
 
-# should respond only the postgres
-ansible postgres -m shell -a 'echo "Hello World!"'
+# should respond only the postgres-db
+ansible postgres-db -m shell -a 'echo "Hello World!"'

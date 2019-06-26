@@ -8,4 +8,4 @@ echo "spark1" >> hosts
 ansible all -m shell -a 'echo "Hello World!"'
 
 # should respond only the postgres
-ansible postgres -m shell -a 'echo "Hello World!"'
+ansible postgres-db -m shell -a 'echo "Hello World!"'
