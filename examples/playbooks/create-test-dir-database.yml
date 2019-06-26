@@ -1,0 +1,9 @@
+---
+- hosts: database
+  vars:
+    testing_dir: "/home/testing"
+  tasks:
+  - name: ensure that testing directory is created
+    file:
+      path: "{{ testing_dir }}"
+      state: directory

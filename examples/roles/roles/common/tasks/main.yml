@@ -1,0 +1,17 @@
+---
+# This playbook install common role.
+
+- name: creating common directory
+  file:
+    path: "{{ testing_dir }}"
+    state: directory
+  tags: install
+
+- name: check directory exists
+  stat:
+    path: "{{ testing_dir }}"
+  register: dir
+
+- fail:
+    msg: "Testing directory {{ testing_dir }} does not exist!"
+  when: dir.stat.exists is not defined or dir.stat.isdir is not defined

@@ -1,0 +1,22 @@
+version: '3'
+
+services:
+  ansible:
+    image: ansible-base
+    container_name: ansible
+    
+  postgres:
+    image: ansible-base
+    container_name: postgres
+
+  postgres:
+    image: ansible-base
+    container_name: postgres
+
+  spark1:
+    image: ansible-base
+    container_name: spark1
+
+  spark2:
+    image: ansible-base
+    container_name: spark2

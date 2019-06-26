@@ -1,0 +1,13 @@
+---
+- hosts: database
+  vars:
+    testing_dir: "/home/testing"
+  tasks:
+  - name: check directory exists
+    stat:
+      path: "{{ testing_dir }}"
+    register: dir
+
+  - debug:
+      msg: "Testing directory {{ testing_dir}} exists!"
+    when: dir.stat.exists and dir.stat.isdir

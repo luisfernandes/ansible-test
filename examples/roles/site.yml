@@ -1,0 +1,19 @@
+---
+# The master playbook to link the hosts to the roles
+# The following are tasks like we already talked
+
+- name: apply aws role to all aws hosts
+  hosts: aws
+  roles:
+    - aws
+
+- name: apply postgres role to database group
+  hosts: database
+  roles:
+    - postgres
+
+- name: apply common and spark roles to batch group
+  hosts: batch
+  roles:
+    - common
+    - spark
